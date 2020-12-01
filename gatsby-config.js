@@ -1,8 +1,4 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
+const path = require("path")
 
 module.exports = {
   plugins: [
@@ -10,7 +6,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     {
@@ -32,6 +28,16 @@ module.exports = {
             languages: ["en", "fr"],
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-root-import`,
+      options: {
+        "@src": path.join(__dirname, "src"),
+        "@components": path.join(__dirname, "src/components"),
+        "@assets": path.join(__dirname, "src/assets"),
+        "@images": path.join(__dirname, "src/assets/images"),
+        "@pages": path.join(__dirname, "src/pages"),
       },
     },
     `gatsby-transformer-sharp`,
