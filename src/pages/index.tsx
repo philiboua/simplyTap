@@ -1,21 +1,15 @@
 import React from "react"
-import { Button, Flex } from "@chakra-ui/react"
-import { Container, Row, Column } from "../components/layout"
-import { Link as NewLink, useTranslation } from "gatsby-plugin-react-i18next"
-import Text from "../components/Text"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+import { Container, Row, Column } from "@components/layout"
+import Header from "@components/patterns/header"
 
-const Home = () => {
+const Home = (): React.ReactElement => {
   const { t } = useTranslation()
   return (
     <Container>
-      <Row>
+      <Row align="center">
         <Column col={["sm4", "md3", "lg12"]}>
-          <Flex>
-            <Text type="heading.first">
-              Gatsby JS and Chakra UI template starter
-            </Text>
-            <Text type="heading.second"> {t("welcome")}</Text>
-          </Flex>
+          <Header />
         </Column>
       </Row>
     </Container>
