@@ -2,6 +2,13 @@ export const Button = {
   baseStyle: {
     lineHeight: "1",
     borderRadius: "sm",
+    height: "auto",
+    fontSize: "16px",
+  },
+  sizes: {
+    lg: {
+      fontSize: "md",
+    },
   },
   variants: {
     solid: () => ({
