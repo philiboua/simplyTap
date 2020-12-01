@@ -1,9 +1,9 @@
 // /tests/test-utils.js
-/* eslint-disable react/jsx-filename-extension */
+
 import React from "react"
 import { render } from "@testing-library/react"
-import theme from "./../chakra-ui/theme"
 import { ChakraProvider } from "@chakra-ui/react"
+import theme from "../chakra-ui/theme"
 
 const AllTheProviders = ({ children }) => {
   return <ChakraProvider theme={theme}>{children}</ChakraProvider>
