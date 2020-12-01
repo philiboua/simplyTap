@@ -3,16 +3,16 @@ import { Box, BoxProps } from "@chakra-ui/react"
 import { colSizes } from "./colSizes"
 
 interface IColumn extends BoxProps {
-  col: string[]
+  col?: string[]
 }
 
-export const Column = ({ children, col, ...props }: IColumn) => {
+export const Column: React.FC<IColumn> = ({ children, col, ...props }) => {
   // in case the prop col is not provided by developer
   // display the column with 100%
 
   if (col?.length === undefined)
     return (
-      <Box size="100%" {...props}>
+      <Box w="100%" className="column" {...props}>
         {children}
       </Box>
     )
@@ -31,7 +31,7 @@ export const Column = ({ children, col, ...props }: IColumn) => {
     <Box
       className="column"
       px="15px"
-      size={{
+      w={{
         sm: columnWidthForMobile,
         md: columnWidthForIpad,
         lg: columnWidthForDesktop,

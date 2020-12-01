@@ -6,32 +6,13 @@
 
 interface IGrid {
   sm: {
-    sm1: string, 
-    sm2: string,
-    sm3: string,
-    sm4: string,
-  },
-  md: {
-    md1: string,
-    md2: string,
-    md3: string,
-    md4: string,
-    md5: string,
-    md6: string,
+    [key: string]: string
   }
-  lg:{
-    lg1: string,
-    lg2: string,
-    lg3: string,
-    lg4: string,
-    lg5: string,
-    lg6: string,
-    lg7: string,
-    lg8: string,
-    lg9: string,
-    lg10: string,
-    lg11: string,
-    lg12: string,
+  md: {
+    [key: string]: string
+  }
+  lg: {
+    [key: string]: string
   }
 }
 

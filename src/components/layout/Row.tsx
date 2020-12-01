@@ -5,7 +5,7 @@ interface IRow extends FlexOptions {
   children?: React.ReactNode
 }
 
-export const Row = ({ children, ...props }: IRow) => {
+export const Row: React.FC<IRow> = ({ children, ...props }) => {
   return (
     <Flex className="row" {...props}>
       {children}

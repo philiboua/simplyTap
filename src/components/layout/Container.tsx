@@ -1,7 +1,7 @@
 import React from "react"
 import { Box, BoxProps } from "@chakra-ui/react"
 
-export const Container = ({ children, ...props }: BoxProps) => {
+export const Container: React.FC<BoxProps> = ({ children, ...props }) => {
   return (
     <Box
       width="100%"
