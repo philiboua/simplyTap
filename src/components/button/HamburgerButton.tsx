@@ -45,7 +45,7 @@ const HamburgerButton: React.FC<IHamburgerButton> = ({ data }) => {
       css={css`
           display: inline-flex;
           align-items: center;
-          padding: 1rem;
+          padding: 0.8rem;
           }
         `}
       type="button"
@@ -56,6 +56,7 @@ const HamburgerButton: React.FC<IHamburgerButton> = ({ data }) => {
     >
       {isTablet ? (
         <Text
+          pt={1}
           pr={4}
           fontWeight="bold"
           type="caption"

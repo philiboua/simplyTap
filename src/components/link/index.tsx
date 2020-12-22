@@ -1,9 +1,20 @@
 /** @jsx jsx */
+/*
+  Purpose : Link component is used to navigate within the website 
+  Implementation : 
+    - When link is external we are using Chakra UI Link component
+    - When link is within the site, we are wrapping Gatsby link with Chakra UI link 
+  Design : 
+    - default design is a regular link 
+    - when props asButton and sizeButton are added to component, we display link as Button 
+
+*/
 import React from "react"
-import { Link as GatsbyLink } from "gatsby-plugin-react-i18next"
-import { Link as ChakraLink, LinkProps, useTheme } from "@chakra-ui/react"
 
 import { css, jsx } from "@emotion/react"
+import { Link as GatsbyLink } from "gatsby-plugin-react-i18next"
+import { Link as ChakraLink, LinkProps, useTheme } from "@chakra-ui/react"
+import GatsbyLinkAsButton from "./GatsbyLinkAsButton"
 
 interface ICustomLinkProps extends LinkProps {
   asButton?: boolean
@@ -20,53 +31,20 @@ const Link: React.FC<ICustomLinkProps> = ({
   ...restProps
 }) => {
   // Get chakra ui theme object
-  const { colors, radii, lineHeights, fontWeights, fontSizes } = useTheme()
+  const { colors } = useTheme()
 
   // displays link as button
   if (asButton) {
-    const getPaddingValue = () => {
-      switch (sizeButton) {
-        case "sm":
-          return "6px 8px"
-        case "md":
-          return "12px 16px"
-        case "lg":
-          return "16px 32px"
-        default:
-          return "12px 16px"
-      }
-    }
-
-    const getFontSize = sizeButton === "sm" ? fontSizes.sm : fontSizes.md
-
     return (
-      <GatsbyLink
-        to={href}
-        css={css`
-          text-decoration: none;
-          color: ${colors.white};
-          background: ${colors.brand[400]};
-          font-weight: ${fontWeights.bold};
-          padding: ${getPaddingValue()};
-          border-radius: ${radii.sm};
-          line-height: ${lineHeights[4]};
-          font-size: ${getFontSize};
-          transition: all 250ms;
-          display: inline-flex;
-          align-items: center;
-          &:hover {
-            text-decocation: none;
-            background: ${colors.brand[500]};
-          }
-        `}
-      >
+      <GatsbyLinkAsButton href={href} sizeButton={sizeButton}>
         {children}
-      </GatsbyLink>
+      </GatsbyLinkAsButton>
     )
   }
   // displays as link
   return (
     <ChakraLink
+      activeStyle={{ color: colors.brand[400] }}
       {...(isExternal ? { href } : { as: GatsbyLink, to: href })}
       {...restProps}
     >
