@@ -11,13 +11,13 @@ type FramerMotionProps =
   | HTMLMotionProps<"p">
 type ChakraTextProps = TextProps
 
-type Text = {
+type CustomTextProps = {
   type: string
 }
 
-type ChakraTextWiMotion = Text & ChakraTextProps & FramerMotionProps
+type ChakraTextWiMotion = CustomTextProps & ChakraTextProps & FramerMotionProps
 
-const Text = ({ children, type, ...props }: ChakraTextWiMotion) => {
+const Text: React.FC<ChakraTextWiMotion> = ({ children, type, ...props }) => {
   switch (type) {
     case "heading.first":
       return (
