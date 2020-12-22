@@ -1,14 +1,25 @@
 import React from "react"
-import { Flex } from "@chakra-ui/react"
+import { Flex, useMediaQuery } from "@chakra-ui/react"
 import Navigation from "@components/navigation"
+import HamburgerButton from "@components/button/HamburgerButton"
 
 import logo from "@images/logo-1.svg"
 
 const Header: React.FC = () => {
+  const [isDesktop] = useMediaQuery("(min-width: 992px")
   return (
-    <Flex justify="space-between" alignItems="center">
+    <Flex justify="space-between" as="header" alignItems="center">
       <img src={logo} alt="logo" />
-      <Navigation />
+      {isDesktop ? (
+        <Navigation />
+      ) : (
+        <HamburgerButton
+          data={{
+            ariaLabel: "Navigation menu",
+            menuLabel: "MENU",
+          }}
+        />
+      )}
     </Flex>
   )
 }
