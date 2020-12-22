@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { useState } from "react"
-import { Box, Flex, BoxProps } from "@chakra-ui/react"
+import { Box, BoxProps, useMediaQuery } from "@chakra-ui/react"
 import Text from "@components/Text"
 import { css, jsx } from "@emotion/react"
 import { motion } from "framer-motion"
@@ -8,14 +8,17 @@ import { motion } from "framer-motion"
 interface IHamburgerButton extends BoxProps {
   data: {
     ariaLabel: string
-    displayLabel: boolean[]
-    menuLabel?: string
+    menuLabel: string
   }
 }
 const HamburgerButton: React.FC<IHamburgerButton> = ({ data }) => {
   const [toggle, setToggle] = useState(false)
+  const [isTablet] = useMediaQuery("(min-width: 768px)")
 
-  // variants to toggle Hamburger animation cf framer motion
+  const { ariaLabel, menuLabel } = data
+
+  // We use variants in order to animate the component,
+  // based on the state of the hamburger button
   const firstHamburgerMenuBarVariant = {
     close: { y: 4, rotate: 0 },
     open: { rotate: 45, y: 0 },
@@ -46,21 +49,24 @@ const HamburgerButton: React.FC<IHamburgerButton> = ({ data }) => {
           }
         `}
       type="button"
-      aria-label={`${data.ariaLabel} is ${toggle ? "open" : "close"}`}
-      title={`${data.ariaLabel} toggle`}
+      aria-label={`${ariaLabel} is ${toggle ? "open" : "close"}`}
+      aria-expanded={toggle}
+      title={`${ariaLabel} toggle`}
       onClick={() => setToggle(!toggle)}
     >
-      {data.menuLabel && (
+      {isTablet ? (
         <Text
           pr={4}
           fontWeight="bold"
           type="caption"
-          initial={toggle ? "open" : "close"}
-          animate={toggle ? "close" : "open"}
+          animate={toggle ? "open" : "close"}
           variants={labelVariant}
+          display="none"
         >
-          {data.menuLabel.toUpperCase()}
+          {menuLabel.toUpperCase()}
         </Text>
+      ) : (
+        ""
       )}
       <Box
         className="Hamburger"
@@ -78,7 +84,6 @@ const HamburgerButton: React.FC<IHamburgerButton> = ({ data }) => {
           top:50%
           }
         `}
-          initial={toggle ? "close" : "open"}
           animate={toggle ? "open" : "close"}
           variants={firstHamburgerMenuBarVariant}
         />
@@ -92,7 +97,6 @@ const HamburgerButton: React.FC<IHamburgerButton> = ({ data }) => {
           top:50%
           }
         `}
-          initial={toggle ? "close" : "open"}
           animate={toggle ? "open" : "close"}
           variants={secondtHamburgerMenuBarVariant}
         />
