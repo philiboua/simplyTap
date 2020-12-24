@@ -46,7 +46,7 @@ const SEO: React.FC<ISEO> = ({
       facebook,
     },
   } = site
-  console.log("pageKeywords", pageKeywords)
+
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
