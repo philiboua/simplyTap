@@ -2,15 +2,11 @@
 import React from "react"
 import { Link as GatsbyLink } from "gatsby-plugin-react-i18next"
 import { useTheme } from "@chakra-ui/react"
+import { IGatsbyLinkAsButton } from "@src/@interfaces"
 
 import { css, jsx } from "@emotion/react"
 
-interface IProps {
-  sizeButton?: string
-  href: string
-}
-
-const GatsbyLinkAsButton: React.FC<IProps> = ({
+const GatsbyLinkAsButton: React.FC<IGatsbyLinkAsButton> = ({
   sizeButton,
   href,
   children,
