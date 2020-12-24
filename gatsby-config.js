@@ -1,29 +1,22 @@
 const path = require("path")
+const website = require("./config/website")
 
 module.exports = {
+  pathPrefix: website.pathPrefix,
   siteMetadata: {
-    title: "Gatsby Starter Project",
-    description: "This is where I write my thoughts.",
-    navigation: [
-      {
-        text: "First",
-        href: "/",
-        isExternal: false,
-        type: "link",
-      },
-      {
-        text: "Second",
-        href: "/about",
-        isExternal: false,
-        type: "link",
-      },
-      {
-        text: "Third",
-        href: "/contact",
-        isExternal: false,
-        type: "link",
-      },
-    ],
+    title: website.siteTitle,
+    titleAlt: website.siteTitleAlt,
+    description: website.siteDescription,
+    keywords: website.siteKeywords,
+    banner: website.siteLogo,
+    canonicalURL: website.siteUrl,
+    siteUrl: website.siteUrl,
+    language: website.siteLang,
+    ogLanguage: website.siteOgLanguage,
+    twitter: website.twitter,
+    facebook: website.facebook,
+    author: website.author,
+    navigation: website.navigation,
   },
   plugins: [
     {

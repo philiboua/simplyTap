@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Header from "@components/patterns/header"
 import { ILink } from "@src/@interfaces"
+import SEO from "@src/components/seo"
 
 interface IPageQuery {
   data: {
@@ -14,7 +15,12 @@ interface IPageQuery {
 }
 
 const Home: React.FC<IPageQuery> = ({ data }) => {
-  return <Header content={data.site.siteMetadata.navigation} />
+  return (
+    <>
+      <SEO />
+      <Header content={data.site.siteMetadata.navigation} />
+    </>
+  )
 }
 
 export const query = graphql`
