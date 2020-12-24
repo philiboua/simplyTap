@@ -1,16 +1,11 @@
 /** @jsx jsx */
 import React, { useState } from "react"
 import { Box, BoxProps, useMediaQuery } from "@chakra-ui/react"
+import { IHamburgerButton } from "@src/@interfaces"
 import Text from "@components/Text"
 import { css, jsx } from "@emotion/react"
 import { motion } from "framer-motion"
 
-interface IHamburgerButton extends BoxProps {
-  data: {
-    ariaLabel: string
-    menuLabel: string
-  }
-}
 const HamburgerButton: React.FC<IHamburgerButton> = ({ data }) => {
   const [toggle, setToggle] = useState(false)
   const [isTablet] = useMediaQuery("(min-width: 768px)")
