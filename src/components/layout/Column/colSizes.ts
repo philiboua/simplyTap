@@ -3,18 +3,7 @@
   - tablet : the grid contains 6 columns
   - desktop : the grid contains 12 columns
 */
-
-interface IGrid {
-  sm: {
-    [key: string]: string
-  }
-  md: {
-    [key: string]: string
-  }
-  lg: {
-    [key: string]: string
-  }
-}
+import { IGrid } from "@src/@interfaces"
 
 export const colSizes: IGrid = {
   sm: {

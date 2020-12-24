@@ -1,10 +1,7 @@
 import React from "react"
-import { Box, BoxProps } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
+import { IColumn } from "@src/@interfaces"
 import { colSizes } from "./colSizes"
-
-interface IColumn extends BoxProps {
-  col?: string[]
-}
 
 export const Column: React.FC<IColumn> = ({ children, col, ...props }) => {
   // in case the prop col is not provided by developer
