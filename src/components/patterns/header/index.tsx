@@ -10,7 +10,7 @@ import { IListOfLinks } from "@src/@interfaces"
 const Header: React.FC<IListOfLinks> = ({ content }) => {
   const [isDesktop] = useMediaQuery("(min-width: 992px")
   return (
-    <Box as="header" bg="#FFA500" py={2}>
+    <Box as="header" role="banner" bg="#FFA500" py={2}>
       <Container>
         <Row>
           <Column col={["sm4", "md6", "lg12"]}>
