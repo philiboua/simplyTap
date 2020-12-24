@@ -1,6 +1,30 @@
 const path = require("path")
 
 module.exports = {
+  siteMetadata: {
+    title: "Gatsby Starter Project",
+    description: "This is where I write my thoughts.",
+    navigation: [
+      {
+        text: "First",
+        href: "/",
+        isExternal: false,
+        type: "link",
+      },
+      {
+        text: "Second",
+        href: "/about",
+        isExternal: false,
+        type: "link",
+      },
+      {
+        text: "Third",
+        href: "/contact",
+        isExternal: false,
+        type: "link",
+      },
+    ],
+  },
   plugins: [
     {
       resolve: "gatsby-source-filesystem",

@@ -1,4 +1,3 @@
-/** @jsx jsx */
 /*
   Purpose : Link component is used to navigate within the website 
   Implementation : 
@@ -10,19 +9,12 @@
 
 */
 import React from "react"
-
-import { css, jsx } from "@emotion/react"
 import { Link as GatsbyLink } from "gatsby-plugin-react-i18next"
-import { Link as ChakraLink, LinkProps, useTheme } from "@chakra-ui/react"
+import { Link as ChakraLink, useTheme } from "@chakra-ui/react"
+import { ILink } from "@src/@interfaces"
 import GatsbyLinkAsButton from "./GatsbyLinkAsButton"
 
-interface ICustomLinkProps extends LinkProps {
-  asButton?: boolean
-  sizeButton?: string
-  href: string
-}
-
-const Link: React.FC<ICustomLinkProps> = ({
+const Link: React.FC<ILink> = ({
   href,
   isExternal,
   asButton,
