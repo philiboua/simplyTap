@@ -19,11 +19,21 @@ module.exports = {
     navigation: website.navigation,
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-json`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
         path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/content/`,
       },
     },
     {
@@ -57,7 +67,5 @@ module.exports = {
         "@pages": path.join(__dirname, "src/pages"),
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
   ],
 }
