@@ -1,0 +1,26 @@
+[
+  {
+    "billboard": {
+      "billboardImage": "../../src/assets/images/code.jpg",
+      "backgroundImage": "",
+      "videoBackground": "",
+      "caption": "Get started",
+      "headline": "Chaka UI is great",
+      "content": "Learn how to build website faster with Chakra UI",
+      "callToAction": [
+        {
+          "text": "Sign up",
+          "href": "/contact",
+          "isExternal": false,
+          "asButton": true
+        },
+        {
+          "text": "Learn more",
+          "href": "/about",
+          "isExternal": false,
+          "asButton": false
+        }
+      ]
+    }
+  }
+]

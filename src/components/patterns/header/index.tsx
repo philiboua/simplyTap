@@ -6,11 +6,24 @@ import Link from "@components/link"
 import HamburgerButton from "@components/button/HamburgerButton"
 import logo from "@images/logo-1.svg"
 import { IListOfLinks } from "@src/@interfaces"
+import { useStaticQuery, graphql } from "gatsby"
 
 const Header: React.FC<IListOfLinks> = ({ content }) => {
   const [isDesktop] = useMediaQuery("(min-width: 992px")
+  const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      allNavigationJson {
+        nodes {
+          href
+          isExternal
+          text
+          asButton
+        }
+      }
+    }
+  `)
   return (
-    <Box as="header" role="banner" bg="#FFA500" py={2}>
+    <Box as="header" role="banner" py={2}>
       <Container>
         <Row>
           <Column col={["sm4", "md6", "lg12"]}>
@@ -26,7 +39,7 @@ const Header: React.FC<IListOfLinks> = ({ content }) => {
               </Link>
 
               {isDesktop ? (
-                <Navigation content={content} />
+                <Navigation content={data.allNavigationJson.nodes} />
               ) : (
                 <HamburgerButton
                   data={{

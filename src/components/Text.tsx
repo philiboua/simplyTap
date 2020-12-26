@@ -15,6 +15,7 @@ const Text: React.FC<ChakraTextWithMotionType> = ({
       return (
         <ChakraTextWithMotion
           lineHeight="heading"
+          mt={0}
           as="h1"
           fontSize={{ sm: "heading.first.mobile", xl: "heading.first.desktop" }}
           fontWeight="700"
@@ -103,6 +104,7 @@ const Text: React.FC<ChakraTextWithMotionType> = ({
         <ChakraTextWithMotion
           lineHeight="caption"
           fontSize="caption"
+          textTransform="uppercase"
           {...props}
         >
           {children}
