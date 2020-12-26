@@ -11,10 +11,10 @@ const ListOfLinks: React.FC<IListOfLinks> = ({ content, ...props }) => {
             <Link
               fontSize="body.first"
               isExternal={link.isExternal}
+              asButton={link.asButton}
               fontWeight="bold"
               href={link.href}
               ml={8}
-              {...props}
             >
               {link.text}
             </Link>
@@ -23,7 +23,11 @@ const ListOfLinks: React.FC<IListOfLinks> = ({ content, ...props }) => {
       })
     : ""
 
-  return <List display="flex">{displayList}</List>
+  return (
+    <List display="flex" alignItems="center" {...props}>
+      {displayList}
+    </List>
+  )
 }
 
 export default ListOfLinks
