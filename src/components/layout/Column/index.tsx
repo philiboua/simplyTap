@@ -9,7 +9,7 @@ export const Column: React.FC<IColumn> = ({ children, col, ...props }) => {
 
   if (col?.length === undefined)
     return (
-      <Box w="100%" className="column" {...props}>
+      <Box px="15px" w="100%" className="column" {...props}>
         {children}
       </Box>
     )
