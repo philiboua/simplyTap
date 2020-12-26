@@ -4,15 +4,7 @@ import { Container, Row, Column } from "@components/layout"
 import Header from "@components/patterns/header"
 
 const About = (): React.ReactElement => {
-  return (
-    <Container>
-      <Row>
-        <Column col={["sm4", "md3", "lg12"]}>
-          <Header />
-        </Column>
-      </Row>
-    </Container>
-  )
+  return <Header />
 }
 
 export default About
