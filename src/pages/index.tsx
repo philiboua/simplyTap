@@ -6,14 +6,7 @@ import { ILink } from "@src/@interfaces"
 import SEO from "@src/components/seo"
 import { Box } from "@chakra-ui/react"
 import Billboard from "@components/patterns/billboard"
-import { useIntl, changeLocale } from "gatsby-plugin-intl"
-
-interface IBillboard {
-  caption: string
-  content: string
-  headline: string
-  callToAction: ILink[]
-}
+import { useIntl } from "gatsby-plugin-intl"
 
 interface IPageQuery {
   data: {
