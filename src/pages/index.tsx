@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 
 import { graphql } from "gatsby"
 import Header from "@components/patterns/header"
-import { ILink } from "@src/@interfaces"
+import { ILink, IChildImageSharp } from "@src/@interfaces"
 import SEO from "@src/components/seo"
 import { Box } from "@chakra-ui/react"
 import Billboard from "@components/patterns/billboard"
@@ -17,15 +17,7 @@ interface IPageQuery {
         headline: string
         callToAction: ILink[]
         billboardImage: {
-          childImageSharp: {
-            fluid: {
-              aspectRatio: number
-              base64: string
-              src: string
-              srcSet: string
-              sizes: string
-            }
-          }
+          childImageSharp: IChildImageSharp
         }
       }
     }
