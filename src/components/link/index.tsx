@@ -9,7 +9,7 @@
 
 */
 import React from "react"
-import { Link as GatsbyLink } from "gatsby-plugin-react-i18next"
+import { Link as GatsbyLink } from "gatsby-plugin-intl"
 import { Link as ChakraLink, useTheme } from "@chakra-ui/react"
 import { ILink } from "@src/@interfaces"
 import GatsbyLinkAsButton from "./GatsbyLinkAsButton"

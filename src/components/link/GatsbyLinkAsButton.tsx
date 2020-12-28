@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React from "react"
-import { Link as GatsbyLink } from "gatsby-plugin-react-i18next"
+
+import { Link as GatsbyLink } from "gatsby-plugin-intl"
 import { useTheme } from "@chakra-ui/react"
 import { IGatsbyLinkAsButton } from "@src/@interfaces"
 

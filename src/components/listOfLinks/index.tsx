@@ -1,9 +1,11 @@
 import React from "react"
+import { useIntl } from "gatsby-plugin-intl"
 import { List, ListItem } from "@chakra-ui/react"
 import { ILink, IListOfLinks } from "@src/@interfaces"
 import Link from "../link"
 
 const ListOfLinks: React.FC<IListOfLinks> = ({ content, ...props }) => {
+  const intl = useIntl()
   const displayList = content
     ? content.map((link: ILink) => {
         return (
@@ -16,7 +18,7 @@ const ListOfLinks: React.FC<IListOfLinks> = ({ content, ...props }) => {
               href={link.href}
               ml={8}
             >
-              {link.text}
+              {intl.formatMessage({ id: `${link.text}` })}
             </Link>
           </ListItem>
         )
