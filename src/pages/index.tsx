@@ -44,9 +44,7 @@ interface IPageQuery {
 
 const Home: React.FC<IPageQuery> = ({ data }) => {
   const intl = useIntl()
-  useEffect(() => {
-    changeLocale("fr")
-  }, [])
+
   const {
     caption,
     headline,
@@ -59,7 +57,7 @@ const Home: React.FC<IPageQuery> = ({ data }) => {
     <>
       <SEO />
       <Header />
-      <Box as="main" role="main" bg="#c6e3e9">
+      <Box as="main" role="main">
         <Billboard
           caption={intl.formatMessage({ id: `${caption}` })}
           headline={intl.formatMessage({ id: `${headline}` })}
