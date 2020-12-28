@@ -36,7 +36,7 @@ const Link: React.FC<ILink> = ({
   // displays as link
   return (
     <ChakraLink
-      activeStyle={{ color: colors.brand[400] }}
+      activeStyle={{ color: colors.neutral[800], fontWeight: "bold" }}
       {...(isExternal ? { href } : { as: GatsbyLink, to: href })}
       {...restProps}
     >

@@ -35,7 +35,7 @@ const GatsbyLinkAsButton: React.FC<IGatsbyLinkAsButton> = ({
       css={css`
         text-decoration: none;
         color: ${colors.white};
-        background: ${colors.brand[400]};
+        background: ${colors.neutral[700]};
         font-weight: ${fontWeights.bold};
         padding: ${getPaddingValue()};
         border-radius: ${radii.sm};
@@ -46,7 +46,7 @@ const GatsbyLinkAsButton: React.FC<IGatsbyLinkAsButton> = ({
         align-items: center;
         &:hover {
           text-decocation: none;
-          background: ${colors.brand[500]};
+          background: ${colors.neutral[800]};
         }
       `}
     >
