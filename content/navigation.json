@@ -1,18 +1,18 @@
 [
   {
-    "text": "Home",
+    "text": "NAVIGATION.HOME",
     "href": "/",
     "isExternal": false,
     "asButton": false
   },
   {
-    "text": "About",
+    "text": "NAVIGATION.ABOUT",
     "href": "/about",
     "isExternal": false,
     "asButton": false
   },
   {
-    "text": "Contact",
+    "text": "NAVIGATION.CONTACT",
     "href": "/contact",
     "isExternal": false,
     "asButton": false

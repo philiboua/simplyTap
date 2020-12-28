@@ -9,7 +9,7 @@
 
 */
 import React from "react"
-import { Link as GatsbyLink } from "gatsby-plugin-react-i18next"
+import { Link as GatsbyLink } from "gatsby-plugin-intl"
 import { Link as ChakraLink, useTheme } from "@chakra-ui/react"
 import { ILink } from "@src/@interfaces"
 import GatsbyLinkAsButton from "./GatsbyLinkAsButton"
@@ -36,7 +36,7 @@ const Link: React.FC<ILink> = ({
   // displays as link
   return (
     <ChakraLink
-      activeStyle={{ color: colors.brand[400] }}
+      activeStyle={{ color: colors.neutral[800], fontWeight: "bold" }}
       {...(isExternal ? { href } : { as: GatsbyLink, to: href })}
       {...restProps}
     >

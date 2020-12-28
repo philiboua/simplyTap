@@ -1,24 +1,26 @@
 [
   {
     "billboard": {
-      "billboardImage": "../../src/assets/images/code.jpg",
+      "billboardImage": "../../src/assets/images/illustration-pattern.png",
       "backgroundImage": "",
       "videoBackground": "",
-      "caption": "Get started",
-      "headline": "Chaka UI is great",
-      "content": "Learn how to build website faster with Chakra UI",
+      "caption": "HOMEPAGE.BILLBOARD.CAPTION",
+      "headline": "HOMEPAGE.BILLBOARD.HEADLINE",
+      "content": "HOMEPAGE.BILLBOARD.CONTENT",
       "callToAction": [
         {
-          "text": "Sign up",
+          "text": "HOMEPAGE.BILLBOARD.CALL_TO_ACTION.FIRST_LINK",
           "href": "/contact",
           "isExternal": false,
-          "asButton": true
+          "asButton": true,
+          "sizeButton": "md"
         },
         {
-          "text": "Learn more",
+          "text": "HOMEPAGE.BILLBOARD.CALL_TO_ACTION.SECOND_LINK",
           "href": "/about",
           "isExternal": false,
-          "asButton": false
+          "asButton": false,
+          "sizeButton": ""
         }
       ]
     }

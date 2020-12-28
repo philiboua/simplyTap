@@ -1,10 +1,12 @@
-import React from "react"
+import React, { useEffect } from "react"
+
 import { graphql } from "gatsby"
 import Header from "@components/patterns/header"
 import { ILink } from "@src/@interfaces"
 import SEO from "@src/components/seo"
 import { Box } from "@chakra-ui/react"
 import Billboard from "@components/patterns/billboard"
+import { useIntl, changeLocale } from "gatsby-plugin-intl"
 
 interface IBillboard {
   caption: string
@@ -41,6 +43,8 @@ interface IPageQuery {
 }
 
 const Home: React.FC<IPageQuery> = ({ data }) => {
+  const intl = useIntl()
+
   const {
     caption,
     headline,
@@ -53,17 +57,17 @@ const Home: React.FC<IPageQuery> = ({ data }) => {
     <>
       <SEO />
       <Header />
-      <Box as="main" role="main" bg="#c6e3e9">
+      <Box as="main" role="main">
         <Billboard
-          caption={caption}
-          headline={headline}
-          content={content}
+          caption={intl.formatMessage({ id: `${caption}` })}
+          headline={intl.formatMessage({ id: `${headline}` })}
+          content={intl.formatMessage({ id: `${content}` })}
           callToAction={callToAction}
           image={billboardImage.childImageSharp}
         />
       </Box>
       <Box as="footer" role="contentinfo">
-        <div>Text</div>
+        <div>hello</div>
       </Box>
     </>
   )

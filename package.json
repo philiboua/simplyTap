@@ -24,6 +24,7 @@
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-chakra-ui": "^0.1.4",
     "gatsby-plugin-emotion": "^4.5.0",
+    "gatsby-plugin-intl": "^0.3.3",
     "gatsby-plugin-react-i18next": "0.0.27",
     "gatsby-plugin-sharp": "^2.8.0",
     "gatsby-source-filesystem": "^2.5.0",

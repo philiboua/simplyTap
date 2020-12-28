@@ -37,24 +37,16 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-react-i18next`,
+      resolve: `gatsby-plugin-intl`,
       options: {
+        // language JSON resource path
         path: `${__dirname}/locales`,
+        // supported language
         languages: [`en`, `fr`],
+        // language file path
         defaultLanguage: `en`,
-        i18nextOptions: {
-          interpolation: {
-            escapeValue: false,
-          },
-          keySeparator: false,
-          nsSeparator: false,
-        },
-        pages: [
-          {
-            matchPath: "/",
-            languages: ["en", "fr"],
-          },
-        ],
+        // option to redirect to `/ko` when connecting `/`
+        redirect: true,
       },
     },
     {

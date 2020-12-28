@@ -1,0 +1,18 @@
+{
+  "NAVIGATION": {
+    "HOME": "Accueil",
+    "ABOUT": "A propos",
+    "CONTACT": "Contact"
+  },
+  "HOMEPAGE": {
+    "BILLBOARD": {
+      "CAPTION": "Commencez",
+      "HEADLINE": "Chakra UI est simple",
+      "CONTENT": "Chakra UI est une bibliothèque de composants simple, modulaire et accessible qui vous donne les éléments de base dont vous avez besoin pour construire vos applications React.",
+      "CALL_TO_ACTION": {
+        "FIRST_LINK": "S'enregistrer",
+        "SECOND_LINK": "En savoir plus"
+      }
+    }
+  }
+}
