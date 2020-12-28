@@ -32,7 +32,7 @@ const Header: React.FC<IListOfLinks> = ({ content }) => {
               as="nav"
               role="navigation"
               alignItems="center"
-              mt={3}
+              my={2}
             >
               <Link href="/">
                 <img src={logo} alt="logo" />
