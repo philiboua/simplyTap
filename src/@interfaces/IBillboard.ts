@@ -1,17 +1,10 @@
 import { ILink } from "./ILink"
+import { IChildImageSharp } from "./IChildImageSharp"
 
 export interface IBillboard {
   caption?: string
   headline: string
   content: string
   callToAction: ILink[]
-  image?: {
-    fluid: {
-      aspectRatio: number
-      base64: string
-      src: string
-      srcSet: string
-      sizes: string
-    }
-  }
+  image?: IChildImageSharp
 }

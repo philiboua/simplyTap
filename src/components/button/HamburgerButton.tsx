@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { useState } from "react"
-import { Box, BoxProps, useMediaQuery } from "@chakra-ui/react"
+import { Box, useMediaQuery } from "@chakra-ui/react"
 import { IHamburgerButton } from "@src/@interfaces"
 import Text from "@components/Text"
 import { css, jsx } from "@emotion/react"

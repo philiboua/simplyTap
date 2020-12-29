@@ -12,6 +12,4 @@ type CustomTextProps = {
   type: string
 }
 
-export type ChakraTextWithMotionType = CustomTextProps &
-  ChakraTextProps &
-  FramerMotionProps
+export type IText = CustomTextProps & ChakraTextProps & FramerMotionProps

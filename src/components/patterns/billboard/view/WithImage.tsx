@@ -33,7 +33,9 @@ export const BillboardWithImage: React.FC<IBillboard> = ({
       </Column>
 
       <Column col={["sm4", "md6", "lg7"]}>
-        {image && <Img fluid={image.fluid} alt="billboard Image" />}
+        {image && (
+          <Img fluid={image.childImageSharp.fluid} alt="billboard Image" />
+        )}
       </Column>
     </>
   )
