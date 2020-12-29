@@ -1,7 +1,8 @@
 [
   {
     "billboard": {
-      "billboardImage": "../../src/assets/images/illustration-pattern.png",
+      "image": "../../src/assets/images/illustration-pattern.png",
+      "type": "withImage",
       "backgroundImage": "",
       "videoBackground": "",
       "caption": "HOMEPAGE.BILLBOARD.CAPTION",
@@ -23,6 +24,29 @@
           "sizeButton": ""
         }
       ]
-    }
+    },
+    "features": [
+      {
+        "featureImage": "../../src/assets/images/computer.jpg",
+        "caption": "SCALE",
+        "headline": "It’s all happening in the channel",
+        "content": "Follow along with everything related to individual topics, projects or teams in their dedicated channels.",
+        "link": ""
+      },
+      {
+        "featureImage": "../../src/assets/images/mouse.jpg",
+        "caption": "SCALE",
+        "headline": "Work closer with other companies",
+        "content": "Keep clients, vendors or partners in the loop by sharing a channel in Slack. Work moves faster when conversations do, too..",
+        "link": ""
+      },
+      {
+        "featureImage": "../../src/assets/images/processor.jpg",
+        "caption": "SCALE",
+        "headline": "History you can see and search",
+        "content": "Projects end, teams change and Slack saves everything. Rather than trying to remember, easily find what you’re looking for.",
+        "link": ""
+      }
+    ]
   }
 ]
