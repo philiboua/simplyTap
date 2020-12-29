@@ -20,7 +20,7 @@ export const BillboardWithCopy: React.FC<IBillboard> = ({
         alignItems="center"
         maxWidth="30rem"
       >
-        {caption && <Text type="caption">{caption}</Text>}
+        {caption && <Text type="caption" >{caption}</Text>}
         <Text type="heading.first" mt={0} align="center">
           {headline}
         </Text>

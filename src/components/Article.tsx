@@ -1,5 +1,5 @@
 import React from "react"
-import { IArticle, ChakraTextWithMotionType } from "@src/@interfaces"
+import { IArticle, IText } from "@src/@interfaces"
 import Text from "@components/Text"
 import { VStack, Box } from "@chakra-ui/react"
 
@@ -17,7 +17,7 @@ const Article: React.FC<IArticle> = ({
         alignItems={centerContent ? "center" : "flex-start"}
       >
         {data
-          ? data.map((item: ChakraTextWithMotionType) => {
+          ? data.map((item: IText) => {
               return <Text type={item.type} />
             })
           : children}

@@ -1,15 +1,11 @@
 import React from "react"
 import { Text as ChakraText } from "@chakra-ui/react"
 import { motion } from "framer-motion"
-import { ChakraTextWithMotionType } from "@src/@interfaces"
+import { IText } from "@src/@interfaces"
 
 const ChakraTextWithMotion = motion.custom(ChakraText)
 
-const Text: React.FC<ChakraTextWithMotionType> = ({
-  children,
-  type,
-  ...props
-}) => {
+const Text: React.FC<IText> = ({ children, type, ...props }) => {
   switch (type) {
     case "heading.first":
       return (
