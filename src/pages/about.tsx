@@ -1,7 +1,5 @@
 import React from "react"
-import Text from "@components/Text"
-import { Container, Row, Column } from "@components/layout"
-import Header from "@components/patterns/header"
+import { Header } from "@src/components"
 
 const About = (): React.ReactElement => {
   return <Header />

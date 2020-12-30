@@ -1,5 +1,5 @@
 import React from "react"
-import Feature from "@components/Feature"
+import { Feature } from "@src/components"
 import { IFeature } from "@src/@interfaces"
 
 interface IProps {

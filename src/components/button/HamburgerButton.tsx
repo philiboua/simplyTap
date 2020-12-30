@@ -2,7 +2,7 @@
 import React, { useState } from "react"
 import { Box, useMediaQuery } from "@chakra-ui/react"
 import { IHamburgerButton } from "@src/@interfaces"
-import Text from "@components/Text"
+import { Text } from "@src/components"
 import { css, jsx } from "@emotion/react"
 import { motion } from "framer-motion"
 

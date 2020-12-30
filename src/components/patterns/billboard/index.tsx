@@ -8,7 +8,7 @@ import React from "react"
 
 import { IBillboard } from "@src/@interfaces"
 import { Box, useTheme } from "@chakra-ui/react"
-import { Container, Row } from "@components/layout"
+import { Container, Row } from "@src/components"
 import { BillboardWithCopy, BillboardWithImage } from "./view"
 
 const Billboard: React.FC<IBillboard> = ({

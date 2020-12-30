@@ -1,6 +1,6 @@
 import React from "react"
 import { IArticle, IText } from "@src/@interfaces"
-import Text from "@components/Text"
+import { Text } from "@src/components"
 import { VStack, Box } from "@chakra-ui/react"
 
 const Article: React.FC<IArticle> = ({

@@ -1,15 +1,18 @@
 import React, { useEffect } from "react"
 
 import { graphql } from "gatsby"
-import Header from "@components/patterns/header"
-import { ILink, IFeature, IBillboard } from "@src/@interfaces"
-import SEO from "@src/components/seo"
-import { Container } from "@components/layout"
-import { Box } from "@chakra-ui/react"
-import Billboard from "@components/patterns/billboard"
-import Features from "@components/patterns/features"
-import Feature from "@components/Feature"
 import { useIntl } from "gatsby-plugin-intl"
+import { Box } from "@chakra-ui/react"
+import { ILink, IFeature, IBillboard } from "@src/@interfaces"
+
+import {
+  Container,
+  Header,
+  SEO,
+  Billboard,
+  Features,
+  Feature,
+} from "@src/components"
 
 interface IPageQuery {
   data: {

@@ -2,9 +2,8 @@ import React from "react"
 
 import { IBillboard } from "@src/@interfaces"
 import { VStack } from "@chakra-ui/react"
-import { Column } from "@components/layout"
-import Text from "@components/Text"
-import ListOfLinks from "@components/listOfLinks"
+import { Column, Text, ListOfLinks } from "@src/components"
+
 import Img from "gatsby-image"
 
 export const BillboardWithImage: React.FC<IBillboard> = ({

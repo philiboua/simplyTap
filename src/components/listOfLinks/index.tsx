@@ -2,7 +2,7 @@ import React from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { List, ListItem } from "@chakra-ui/react"
 import { ILink, IListOfLinks } from "@src/@interfaces"
-import Link from "../link"
+import { Link } from "@src/components"
 
 const ListOfLinks: React.FC<IListOfLinks> = ({ content, ...props }) => {
   const intl = useIntl()
