@@ -3,7 +3,7 @@ import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { Box } from "@chakra-ui/react"
-import { ILink, IFeature, IBillboard } from "@src/@interfaces"
+import { ILink, IFeature, IBillboard, ICard } from "@src/@interfaces"
 
 import {
   Container,
@@ -12,6 +12,8 @@ import {
   Billboard,
   Features,
   Feature,
+  CardsContainer,
+  Row,
 } from "@src/components"
 
 interface IPageQuery {
@@ -19,6 +21,7 @@ interface IPageQuery {
     homepageJson: {
       billboard: IBillboard
       features: IFeature[]
+      cards: ICard[]
     }
     allNavigationJson: {
       nodes: ILink[]
@@ -62,6 +65,13 @@ const Home: React.FC<IPageQuery> = ({ data }) => {
           />
         </Container>
       </Box>
+      <Box as="section">
+        <Container>
+          <Row wrap="wrap">
+            <CardsContainer content={data.homepageJson.cards} />
+          </Row>
+        </Container>
+      </Box>
       <Box as="footer" role="contentinfo">
         <div>hello</div>
       </Box>
@@ -96,7 +106,36 @@ export const query = graphql`
           }
         }
       }
+      cards {
+        id
+        type
+        link {
+          text
+          asButton
+          href
+          isExternal
+        }
+        image {
+          childImageSharp {
+            fluid(maxHeight: 200) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        icon {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        data {
+          content
+          headline
+        }
+      }
       features {
+        id
         caption
         content
         headline

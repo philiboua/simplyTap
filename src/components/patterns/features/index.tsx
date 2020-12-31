@@ -1,12 +1,10 @@
 import React from "react"
 import { Feature } from "@src/components"
 import { IFeature } from "@src/@interfaces"
+import { isEven } from "@src/utils"
 
 interface IProps {
   data: IFeature[]
-}
-const isEven = (num: number): boolean => {
-  return num % 2 === 0
 }
 
 const Features: React.FC<IProps> = ({ data }) => {
@@ -15,6 +13,7 @@ const Features: React.FC<IProps> = ({ data }) => {
       ? data.map((feature: IFeature, index: number) => {
           return (
             <Feature
+              key={feature.id}
               caption={feature.caption}
               featureImage={feature.featureImage}
               headline={feature.headline}

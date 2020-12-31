@@ -13,6 +13,7 @@ const Article: React.FC<IArticle> = ({
   return (
     <Box as="article" {...props}>
       <VStack
+        flexGrow={1}
         spacing={spacing || 1}
         alignItems={centerContent ? "center" : "flex-start"}
       >

@@ -27,6 +27,7 @@
     },
     "features": [
       {
+        "id": "feature1",
         "featureImage": "../../src/assets/images/computer.jpg",
         "caption": "SCALE",
         "headline": "It’s all happening in the channel",
@@ -34,6 +35,7 @@
         "link": ""
       },
       {
+        "id": "feature2",
         "featureImage": "../../src/assets/images/mouse.jpg",
         "caption": "SCALE",
         "headline": "Work closer with other companies",
@@ -41,11 +43,62 @@
         "link": ""
       },
       {
+        "id": "feature3",
         "featureImage": "../../src/assets/images/processor.jpg",
         "caption": "SCALE",
         "headline": "History you can see and search",
         "content": "Projects end, teams change and Slack saves everything. Rather than trying to remember, easily find what you’re looking for.",
         "link": ""
+      }
+    ],
+    "cards": [
+      {
+        "id": "card1",
+        "image": "../../src/assets/images/computer.jpg",
+        "icon": "../../src/assets/images/disable.png",
+        "type": "withIcon",
+        "link": {
+          "text": "Get started",
+          "asButton": false,
+          "href": "/about",
+          "isExternal": true
+        },
+        "data": {
+          "headline": "Get started",
+          "content": "Follow along with everything related to individual topics, projects or teams in their dedicated channels."
+        }
+      },
+      {
+        "id": "card2",
+        "image": "../../src/assets/images/mouse.jpg",
+        "icon": "../../src/assets/images/calendar.png",
+        "type": "withIcon",
+        "link": {
+          "text": "Get started",
+          "asButton": false,
+          "href": "/about",
+          "isExternal": false
+        },
+        "data": {
+          "headline": "Get started",
+          "content": "Follow along with everything related to individual topics, projects or teams in their dedicated channels."
+        }
+      },
+      {
+        "id": "card3",
+        "image": "../../src/assets/images/processor.jpg",
+        "icon": "../../src/assets/images/sleep.png",
+        "type": "withIcon",
+        "link": {
+          "text": "Get started",
+          "asButton": false,
+          "href": "/about",
+          "isExternal": true
+        },
+        "data": {
+          "headline": "Get started",
+          "content": "You should know better my man"
+        }
       }
     ]
   }
