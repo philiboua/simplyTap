@@ -6,4 +6,5 @@ export interface ILink extends LinkProps, IGatsbyLinkAsButton {
   isExternal?: boolean
   text?: string
   href: string
+  displayRightArrow?: boolean
 }
