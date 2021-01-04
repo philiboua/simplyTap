@@ -10,7 +10,7 @@ const Text: React.FC<IText> = ({ children, type, ...props }) => {
     case "heading.first":
       return (
         <ChakraTextWithMotion
-          lineHeight="none"
+          lineHeight="small"
           mt={0}
           as="h1"
           fontSize={{ sm: "heading.first.mobile", xl: "heading.first.desktop" }}

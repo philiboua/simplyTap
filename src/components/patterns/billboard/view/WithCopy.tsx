@@ -2,9 +2,7 @@ import React from "react"
 
 import { IBillboard } from "@src/@interfaces"
 import { VStack } from "@chakra-ui/react"
-import { Column } from "@components/layout"
-import Text from "@components/Text"
-import ListOfLinks from "@components/listOfLinks"
+import { Column, Text, ListOfLinks } from "@src/components"
 
 export const BillboardWithCopy: React.FC<IBillboard> = ({
   caption,
@@ -20,7 +18,7 @@ export const BillboardWithCopy: React.FC<IBillboard> = ({
         alignItems="center"
         maxWidth="30rem"
       >
-        {caption && <Text type="caption" >{caption}</Text>}
+        {caption && <Text type="caption">{caption}</Text>}
         <Text type="heading.first" mt={0} align="center">
           {headline}
         </Text>

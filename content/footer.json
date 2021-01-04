@@ -1,0 +1,35 @@
+[
+  {
+    "companyLogo": "../src/assets/images/logo-1.svg",
+    "companyMission": "FOOTER.COMPANY_MISSION",
+    "copyright": "FOOTER.COPYRIGHTS",
+    "socialMedia": [
+      {
+        "id": "facebook",
+        "socialMediaUrl": "/"
+      },
+      {
+        "id": "instagram",
+        "socialMediaUrl": "/"
+      },
+      {
+        "id": "twitter",
+        "socialMediaUrl": "/"
+      }
+    ],
+    "footerLinks": [
+      {
+        "text": "FOOTER.LINKS.PRIVACY",
+        "href": "/",
+        "isExternal": false,
+        "asButton": false
+      },
+      {
+        "text": "FOOTER.LINKS.CONTACT_US",
+        "href": "/about",
+        "isExternal": false,
+        "asButton": false
+      }
+    ]
+  }
+]

@@ -1,11 +1,18 @@
 import React from "react"
-import { Flex, Box, useMediaQuery } from "@chakra-ui/react"
-import { Container, Column, Row } from "@components/layout"
-import Navigation from "@src/components/listOfLinks"
-import Link from "@components/link"
-import HamburgerButton from "@components/button/HamburgerButton"
-import logo from "@images/logo-1.svg"
 import { IListOfLinks } from "@src/@interfaces"
+import { Flex, Box, useMediaQuery } from "@chakra-ui/react"
+
+import {
+  Container,
+  Column,
+  Row,
+  Link,
+  HamburgerButton,
+  ListOfLinks as Navigation,
+} from "@src/components"
+
+import logo from "@images/logo-1.svg"
+
 import { useStaticQuery, graphql } from "gatsby"
 
 const Header: React.FC<IListOfLinks> = ({ content }) => {

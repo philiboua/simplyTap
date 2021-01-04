@@ -1,21 +1,31 @@
-import React, { useEffect } from "react"
+import React from "react"
 
 import { graphql } from "gatsby"
-import Header from "@components/patterns/header"
-import { ILink, IFeature, IBillboard } from "@src/@interfaces"
-import SEO from "@src/components/seo"
-import { Container } from "@components/layout"
-import { Box } from "@chakra-ui/react"
-import Billboard from "@components/patterns/billboard"
-import Features from "@components/patterns/features"
-import Feature from "@components/Feature"
 import { useIntl } from "gatsby-plugin-intl"
+import { Box } from "@chakra-ui/react"
+import { ILink, IFeature, IBillboard, ICard } from "@src/@interfaces"
+
+import {
+  Container,
+  Header,
+  SEO,
+  Billboard,
+  Features,
+  Feature,
+  CardsContainer,
+  Row,
+  Column,
+  Article,
+  Text,
+  Footer,
+} from "@src/components"
 
 interface IPageQuery {
   data: {
     homepageJson: {
       billboard: IBillboard
       features: IFeature[]
+      cards: ICard[]
     }
     allNavigationJson: {
       nodes: ILink[]
@@ -59,8 +69,27 @@ const Home: React.FC<IPageQuery> = ({ data }) => {
           />
         </Container>
       </Box>
+      <Box as="section" id="specifications" py={40}>
+        <Container>
+          <Row>
+            <Column>
+              <Article centerContent py={28}>
+                <Text type="heading.second" textAlign="center">
+                  A better way to send money
+                </Text>
+                <Text type="body.first">
+                  This is to display a card container{" "}
+                </Text>
+              </Article>
+            </Column>
+          </Row>
+          <Row wrap="wrap">
+            <CardsContainer content={data.homepageJson.cards} />
+          </Row>
+        </Container>
+      </Box>
       <Box as="footer" role="contentinfo">
-        <div>hello</div>
+        <Footer />
       </Box>
     </>
   )
@@ -93,7 +122,36 @@ export const query = graphql`
           }
         }
       }
+      cards {
+        id
+        type
+        link {
+          text
+          asButton
+          href
+          isExternal
+        }
+        image {
+          childImageSharp {
+            fluid(maxHeight: 200) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        icon {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        data {
+          content
+          headline
+        }
+      }
       features {
+        id
         caption
         content
         headline

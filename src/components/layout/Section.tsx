@@ -1,7 +1,7 @@
 import React from "react"
 import { ISection } from "@src/@interfaces"
 import { Box } from "@chakra-ui/react"
-import { Container } from "@components/layout"
+import { Container } from "@src/components"
 
 export const Section: React.FC<ISection> = ({ withContainer, children }) => {
   if (withContainer) {
