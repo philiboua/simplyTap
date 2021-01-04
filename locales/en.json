@@ -4,10 +4,18 @@
     "ABOUT": "About",
     "CONTACT": "Contact"
   },
+  "FOOTER": {
+    "COPYRIGHTS": "© Copyright 2021 Gatsby Chakra. All rights reserved.",
+    "COMPANY_MISSION": "We are here to build the best service available",
+    "LINKS": {
+      "PRIVACY": "Privacy & terms",
+      "CONTACT_US": "Contact us"
+    }
+  },
   "HOMEPAGE": {
     "BILLBOARD": {
       "CAPTION": "Get started",
-      "HEADLINE": "Chakra UI is a simple",
+      "HEADLINE": "Chakra UI is simple",
       "CONTENT": "Chakra UI is a simple, modular and accessible component library that gives you the building blocks you need to build your React applications.",
       "CALL_TO_ACTION": {
         "FIRST_LINK": "Get started",

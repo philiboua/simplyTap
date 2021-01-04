@@ -27,6 +27,7 @@ export const fontSizes = {
 }
 
 export const lineHeights = {
+  small: "0.9",
   normal: "normal",
   none: "1",
   heading: "1.25",

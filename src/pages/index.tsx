@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
@@ -14,6 +14,10 @@ import {
   Feature,
   CardsContainer,
   Row,
+  Column,
+  Article,
+  Text,
+  Footer,
 } from "@src/components"
 
 interface IPageQuery {
@@ -65,15 +69,27 @@ const Home: React.FC<IPageQuery> = ({ data }) => {
           />
         </Container>
       </Box>
-      <Box as="section">
+      <Box as="section" id="specifications" py={40}>
         <Container>
+          <Row>
+            <Column>
+              <Article centerContent py={28}>
+                <Text type="heading.second" textAlign="center">
+                  A better way to send money
+                </Text>
+                <Text type="body.first">
+                  This is to display a card container{" "}
+                </Text>
+              </Article>
+            </Column>
+          </Row>
           <Row wrap="wrap">
             <CardsContainer content={data.homepageJson.cards} />
           </Row>
         </Container>
       </Box>
       <Box as="footer" role="contentinfo">
-        <div>hello</div>
+        <Footer />
       </Box>
     </>
   )
