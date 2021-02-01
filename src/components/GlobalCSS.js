@@ -6,9 +6,9 @@ const GlobalCSS = ({ children }) => {
     <div>
       <Global
         styles={css`
-          @import url("https://diatom-assets.s3.ca-central-1.amazonaws.com/GT.css?display=swap");
+          @import url("https://diatom-assets.s3.ca-central-1.amazonaws.com/Fonts/Square/SquareFont.css?display=swap");
           body {
-            font-family: GT Walsheim Pro;
+            font-family: SquareFont;
           }
         `}
       />

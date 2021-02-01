@@ -7,11 +7,17 @@ export const fonts = {
 export const fontSizes = {
   heading: {
     first: {
-      desktop: "3rem",
-      mobile: "2.25rem",
+      desktop: "5.75rem",
+      mobile: "2.75rem",
     },
-    second: "1.875rem",
-    third: "1.5rem",
+    second: {
+      desktop: "3.125rem",
+      mobile: "2rem",
+    },
+    third: {
+      desktop: "2rem",
+      mobile: "1.5rem",
+    },
   },
   introduction: "1.25rem",
   subtitle: {

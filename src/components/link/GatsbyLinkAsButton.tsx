@@ -18,13 +18,13 @@ const GatsbyLinkAsButton: React.FC<IGatsbyLinkAsButton> = ({
   const getPaddingValue = () => {
     switch (sizeButton) {
       case "sm":
-        return "6px 8px"
+        return "9px 22px"
       case "md":
-        return "12px 16px"
+        return "13px 20px"
       case "lg":
         return "16px 32px"
       default:
-        return "12px 16px"
+        return "13px 20px"
     }
   }
 
@@ -35,18 +35,18 @@ const GatsbyLinkAsButton: React.FC<IGatsbyLinkAsButton> = ({
       css={css`
         text-decoration: none;
         color: ${colors.white};
-        background: ${colors.neutral[700]};
-        font-weight: ${fontWeights.bold};
+        background: ${colors.alpha.alertLight};
+        font-weight: 500;
         padding: ${getPaddingValue()};
-        border-radius: ${radii.sm};
-        line-height: ${lineHeights[4]};
+        border-radius: 5px;
+        line-height: 22px;
         font-size: ${getFontSize};
         transition: all 250ms;
         display: inline-flex;
         align-items: center;
         &:hover {
           text-decocation: none;
-          background: ${colors.neutral[800]};
+          background: ${colors.alpha.alertDark};
         }
       `}
     >

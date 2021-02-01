@@ -25,7 +25,10 @@ const Text: React.FC<IText> = ({ children, type, ...props }) => {
         <ChakraTextWithMotion
           lineHeight="heading"
           as="h2"
-          fontSize="heading.second"
+          fontSize={{
+            sm: "heading.second.mobile",
+            xl: "heading.second.desktop",
+          }}
           fontWeight="700"
           {...props}
         >
@@ -37,7 +40,7 @@ const Text: React.FC<IText> = ({ children, type, ...props }) => {
         <ChakraTextWithMotion
           lineHeight="heading"
           as="h3"
-          fontSize="heading.third"
+          fontSize={{ sm: "heading.third.mobile", xl: "heading.third.desktop" }}
           fontWeight="700"
           {...props}
         >
